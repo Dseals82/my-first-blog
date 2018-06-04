@@ -1,6 +1,10 @@
-$navbar-default-bg:	#403C34;
+$navbar-default-bg:	#4D4D3E;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// .navbar .navbar-default .navbar-fixed-top ul li a {
+//   color: #fff !important;
+// }
 
 body {
   padding-top: 70px;
@@ -31,7 +35,7 @@ body {
 }
 
 .jumbotron h1 {
-  color:	#403C34;
+  color: #4D4D3E;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: -1px;
@@ -41,19 +45,20 @@ body {
 .btn-xlrg {
   font-size: 1.8em;
   background-color: #8E4D39;
-  border-color: #853F30;
+  border-color: #8E4D39;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
     color: #fff;
     background-color: #9F5B3D;
-    border-color: #853F30;
+    border-color: #9F5B3D;
 }
 
 footer {
   margin-top: 50px;
-  padding-top: 5px;
+  padding-top: 15px;
   border-top: 1px solid #403C34;
+  text-align: center;
 }
 
 footer a:hover {
@@ -61,7 +66,7 @@ footer a:hover {
 }
 
 footer small {
-  float: left;
+  text-align: center;
 }
 footer ul {
   float: right;
@@ -71,4 +76,11 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+.container li a {
+    color: #fff !important;
+}
+.navbar .navbar-default .container .dropdown-menu li a {
+  color: black !important;
 }
