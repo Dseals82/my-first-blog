@@ -1,5 +1,5 @@
 $navbar-default-bg:	#4D4D3E;
-$brand-primary: #9F5B3D;
+$brand-info: #9F5B3D;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -12,6 +12,9 @@ body {
   background-color: #F2F2F2;
 }
 
+.description {
+  margin-top: 0;
+}
 #logo {
   float: left;
   font-size: 1.5em;
@@ -57,11 +60,9 @@ body {
 .navbar-default .navbar-nav > li > a {
   color: #fff;
 }
-// .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-//     color: #fff;
-//     background-color: #9F5B3D;
-//     border-color: #9F5B3D;
-// }
+.navbar-default .navbar-nav > li > a:hover {
+  color: #EEE9E3;
+}
 
 footer {
   margin-top: 50px;
