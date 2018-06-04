@@ -13,6 +13,9 @@ gem 'puma', '~> 3.11'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
+gem 'devise'
+gem 'carrierwave', '~> 1.0'
+gem 'kaminari'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
