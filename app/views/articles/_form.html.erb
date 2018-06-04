@@ -8,22 +8,33 @@
 </ul>
 <% end%>
 
-<%= form_for @article do |n| %>
-  <p>
+<div class="row">
+  <div class="col-xs-12">
+    <%= form_for(@article , :html => {class: "form-horizontal", role: "form"}) do |n| %>
+    <div class="form-group">
+    <div class="control-label col-sm-2">
     <%= n.label :title %>
-            <br>
-    <%= n.text_field :title %>
-
-  </p>
-  <p>
+    </div>
+    <div class="col-sm-8">
+      <%= n.text_field :title, class: "form-control", placeholder: "title of article", autofucs: true %>
+    </div>
+  </div> <!--form group-->
+  <div class="form-group">
+  <div class="control-label col-sm-2">
     <%= n.label :description %>
-            <br>
-    <%= n.text_area :description %>
-
-  </p>
-  <p>
-    <%= n.submit %>
-  </p>
+  </div>
+  <div class="col-sm-8">
+    <%= n.text_area :description, rows: 10, class: "form-control", placeholder: "body of article" %>
+  </div>
+</div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= n.submit class: "btn btn-primary btn-lg btn-xlrg"%>
+    </div>
+  </div>
 <% end %>
-
-<%= link_to "Back to articles listing", articles_path%>
+    <div class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to "Cancel request and Back to articles listing", articles_path%> ]
+    </div>
+  </div>
+</div>
