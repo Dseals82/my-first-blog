@@ -1,0 +1,28 @@
+<h1 align="center">login</h1>
+
+<%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |n| %>
+<div class="form-group">
+<div class="control-label col-sm-2">
+<%= n.label :email %>
+</div>
+<div class="col-sm-8">
+  <%= n.email_field :email, class: "form-control", placeholder: "Enter email...", autofucs: true %>
+</div>
+</div> <!--form group-->
+<div class="form-group">
+<div class="control-label col-sm-2">
+<%= n.label :password %>
+</div>
+<div class="col-sm-8">
+<%= n.password_field :password, class: "form-control", autocomplete: "off" %>
+</div>
+</div>
+<div class="form-group">
+<div class="col-sm-offset-2 col-sm-10">
+  <%= n.submit "Log in", class: "btn btn-primary btn-default"%>
+</div>
+</div>
+<% end %>
+<div class="col-xs-4 col-xs-offset-4">
+  [ <%= link_to "Cancel request and go back to articles listing", articles_path%> ]
+</div>
