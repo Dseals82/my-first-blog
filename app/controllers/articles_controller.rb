@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    # @article = Article.find(params[:id])
+
   end
 
   def create
@@ -59,7 +59,8 @@ class ArticlesController < ApplicationController
     end
 
     def require_same_user
-      if current_user !="Oops! You can only edit or delete your own articles!"
+      if current_user !=@article.user
+        flash[:danger] = "Oops! You can only edit or delete your own articles!"
         redirect_to root_path
     end
   end
