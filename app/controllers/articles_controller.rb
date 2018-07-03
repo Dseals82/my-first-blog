@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
   def create
 
-    @article = Article.new(article_params)
+      @article = Article.new(article_params)
       @article.user = current_user
       if @article.save
         flash[:success] = "Excellent! Your Article was successfully created!"
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-
+  
   end
 
   def destroy
